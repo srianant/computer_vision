@@ -22,7 +22,7 @@ This github repository work is greatly inspired and have used code, concepts pre
 
 ## Installation and Compiling:
 
-- [install_packages](https://github.com/srianant/signal_processing/blob/master/video_processing/openpose/installation.md)   (INSTALLATION IS MUST..)
+- [install_packages](https://github.com/srianant/computer_vision/blob/master/openpose/installation.md)   (INSTALLATION IS MUST..)
 - copy following directories/files from this github repo to respective openpose folders
   - copy from_this_repo/openpose/Makefile ~openpose/Makefile
   - copy from_this_repo/openpose/Makefile.config ~openpose/Makefile.config
