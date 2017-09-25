@@ -1,0 +1,1 @@
+22 serialization::archive 14 0 0 10 7 unknown 6 normal 5 happy 3 sad 8 surprise 0  0  0  0  0 

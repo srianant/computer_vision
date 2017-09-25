@@ -1,0 +1,1 @@
+22 serialization::archive 14 0 0 10 7 unknown 4 fist 5 pinch 4 wave 7 victory 4 stop 8 thumbsup 0  0  0 
