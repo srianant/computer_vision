@@ -1,2 +1,2 @@
 # computer_vision
-- openpose: Object Detection, Tracking, Face Recognition, Gesture, Emotions and Posture classification   
+- openpose: C/C++/Python based Object Detection, Tracking, Face Recognition, Gesture, Emotions and Posture classification   
