@@ -14,7 +14,7 @@
 > sudo apt-get install python-dev python-pip python3-dev python3-pip  
 > sudo -H pip2 install -U pip numpy  
 > sudo -H pip3 install -U pip numpy  
-> pip install numpy pandas scipy matplotlib scikit-image scikit-learn ipython
+> pip install numpy scipy matplotlib scikit-image scikit-learn ipython
 
 #### Install CUDA, cUDNN, TensorFlow, Keras, H5Py
 https://github.com/lwneal/install-keras
