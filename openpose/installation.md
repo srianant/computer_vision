@@ -42,3 +42,57 @@ Download the installation script [install-opencv.sh](https://github.com/milq/mil
 Improtant: Make sure to run openpose suggested examples.
 
 Congrats..!!! You have completed installing all necessary packages.  
+
+## Compiling  
+
+- copy following directories/files from this github repo to respective openpose folders
+  - copy from_this_repo/openpose/Makefile ~openpose/Makefile
+  - copy from_this_repo/openpose/Makefile.config ~openpose/Makefile.config
+  - copy from_this_repo/openpose/3rdparty/caffe/Makefile ~openpose/3rdparty/caffe/Makefile
+  - copy from_this_repo/openpose/3rdparty/caffe/Makefile.config ~openpose/3rdparty/caffe/Makefile.config
+  - copy -r from_this_repo/openpose/train_data ~/openpose/
+  - copy -r from_this_repo/openpose/examples/user_code ~/openpose/examples
+  - copy -r from_this_repo/openpose/src/openpose/user_code ~/openpose/src/openpose
+  - copy -r from_this_repo/openpose/inc/openpose/user_code ~/openpose/inc/openpose  
+
+
+- From ~/openpose/3rdparty/caffe/ directory  
+  (Make sure you have compiled openpose and executed few examples)
+> make clean  
+> make -j8  
+
+- From ~/openpose/ directory  
+> make clean  
+> make -j8
+
+## How to Run:
+(From openpose root directory ~/openpose/)  
+- Gesture Recognition:
+>./build/examples/user_code/openpose_recognition.bin --hand  
+
+- Emotions Recognition:  
+>./build/examples/user_code/openpose_recognition.bin --face  
+
+- Pose Recognition:  
+>./build/examples/user_code/openpose_recognition.bin --pose  
+
+- Face Recognition:  
+>./build/examples/user_code/openpose_recognition.bin --dlib_face  
+
+You could also run following combinations of recognitions:
+> ./build/examples/user_code/openpose_recognition.bin --hand --pose  
+> ./build/examples/user_code/openpose_recognition.bin --face --pose   
+> ./build/examples/user_code/openpose_recognition.bin --dlib_face --pose  
+> ./build/examples/user_code/openpose_recognition.bin --dlib_face --face   
+
+WARNING: Due to memory constraint FACE and HAND recognitions are not allowed simultaneously..!!. To run this you need minimum of 2x GPU memory requirements.
+
+## Generating New Keras Classifier model:
+This repository comes with experimented samples, pre-compiled classifier models and can be found in from_this_repo/openpose/train_data folder.
+
+After installation and compiling steps:  
+(Note: virtualenv named "tensorflow" was used in my environment to install tensorflow)  
+> source tensorflow/bin/activate  
+(tensorflow) ubuntu:$ python openpose/examples/user_code/python/rnn_lstm_classifier.py
+
+Note: Jupyter notebook version of above python file can also be found in same directory. Recommended to use if you wish to perform model visualizations
