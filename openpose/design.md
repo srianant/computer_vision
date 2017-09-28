@@ -11,14 +11,13 @@ The **recognition** application design and code is rightly integrated into OpenP
 
 
 <img src="images/software_arch.png"  height="400"/>   
-Fig(1): Software Architecture     
-Modules in orange are newly added/integrated for "recognition". Grey modules are of native OpenPose.    
+Fig(1): Software Architecture: Modules in orange are newly added/integrated for "recognition". Grey modules are of native OpenPose.    
 
 ### 1.1) OpenPose Architecture:  
 Architecture in Fig(1.1) shows two-branch multi-stage CNN. Each stage in the first branch predicts confidence map S^t, and each stage in the second branch predicts PAFs(Part Affinity Fields) L^t. After each stage, the prediction form the two branches, along with the image features, are concatenated for next stage.  
 
 <img src="images/openpose_arch.png" height="300"/>   
-Fig(1.1): **OpenPose Architecture**    [[1](https://arxiv.org/pdf/1611.08050.pdf)]  
+Fig(1.1): OpenPose Architecture [1]    
 
 
 ## 2) Classifier:
@@ -32,7 +31,7 @@ Fig(2): Keras Classifier Model
 
 ### 2.1) Prediction:  
 
-Predictions are done for every time distributed sample in "recognition" software using Kerasify [[4](https://github.com/moof2k/kerasify)]  
+Predictions are done for every time distributed sample in "recognition" software using Kerasify [4]    
 
 ## 3) OpenPose:  
 A realtime multi-person skeletal 2D pose estimation deep neural network that locates anatomical keypoints for each person body parts such as limbs, hand, leg etc. using part affinity fields. Details of their design and research can be found [here](https://arxiv.org/pdf/1611.08050.pdf).  
@@ -41,7 +40,7 @@ A realtime multi-person skeletal 2D pose estimation deep neural network that loc
 OpenPose **Hand Keypoints** illustrated in Fig(3.1) is used to classify different human hand gestures like victory, wave, stop, fist etc. The **recognition** application constructs a sample vector using cosine distance measured from reference keypoint (0: wrist) to all other hand keypoints as show in the Fig(3.1). This distance metric allows us to uniquely classify different gestures.  
 
 <img src="images/keypoints_hand.png" height="300"/>   
-Fig(3.1): OpenPose Hand Keypoints   [[2](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/output.md)]  
+Fig(3.1): OpenPose Hand Keypoints [2]  
 
 Here are few hand keypoints rendered test samples with prediction and its confidence score.
 
@@ -80,7 +79,7 @@ OpenPose **Face Keypoints** illustrated in Fig(3.2) is used to classify differen
 
 
 <img src="images/keypoints_face.png" height="300"/>   
-Fig(3.2): OpenPose Face Keypoints   [[2](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/output.md)]  
+Fig(3.2): OpenPose Face Keypoints [2]   
 
 
 Here are few face emotions rendered test samples with prediction and its confidence score.  
@@ -118,7 +117,7 @@ Fig(3.2.1) Face Emotions Training Results
 OpenPose **Pose Keypoints** illustrated in Fig(3.3) is used to classify different human pose (posture) like sitting, standing and close_to_camera. The **recognition** application constructs a sample vector using l2 distance measured from reference keypoint (0: neck) to all other pose keypoints as show in Fig(3.3). This distance metric allows us to uniquely classify different human posture.  
 
 <img src="images/keypoints_pose.png" height="300"/>    
-Fig(3.3): OpenPose Pose Keypoints   [[2](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/output.md)]  
+Fig(3.3): OpenPose Pose Keypoints [2]  
 
 Here are few pose rendered test samples with prediction and its confidence score.  
 
