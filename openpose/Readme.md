@@ -25,7 +25,7 @@ This github repository work is greatly inspired and have used code, concepts pre
 - [install_compile_and_run](https://github.com/srianant/computer_vision/blob/master/openpose/installation.md)   (INSTALLATION IS MUST..)
 
 ## Design:  
-- [Software design](https://github.com/srianant/signal_processing/blob/master/video_processing/openpose/design.md)    
+- [Software design](https://github.com/srianant/computer_vision/blob/master/openpose/design.md)    
 
 ## Demo:  
 
