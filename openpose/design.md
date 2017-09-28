@@ -11,14 +11,14 @@ The **recognition** application design and code is rightly integrated into OpenP
 
 
 <img src="images/software_arch.png"  height="400"/>   
-Fig(1): **Software Architecture**    
+Fig(1): Software Architecture     
 Modules in orange are newly added/integrated for "recognition". Grey modules are of native OpenPose.    
 
 ### 1.1) OpenPose Architecture:  
 Architecture in Fig(1.1) shows two-branch multi-stage CNN. Each stage in the first branch predicts confidence map S^t, and each stage in the second branch predicts PAFs(Part Affinity Fields) L^t. After each stage, the prediction form the two branches, along with the image features, are concatenated for next stage.  
 
 <img src="images/openpose_arch.png" height="300"/>   
-Fig(1.1): **OpenPose Architecture**    [[1]](https://arxiv.org/pdf/1611.08050.pdf)  
+Fig(1.1): **OpenPose Architecture**    [[1](https://arxiv.org/pdf/1611.08050.pdf)]  
 
 
 ## 2) Classifier:
@@ -28,34 +28,34 @@ A Time Distributed Feed Forward (Dense) neural network with LSTM classifier is u
 Consider a batch of 32 samples, where each sample is a sequence of 5 vectors of 36 dimensions. The batch input shape of the layer is then (32, 5, 36), and the input_shape, not including the samples dimension, is  (5, 36). Fig(1a) depicts network for posture(pose) with sample vector dimension of 36. Details of sample vector and distance metric are explained in below sections.  
 
 <img src="images/keras_network.png" height="600"/>
-Fig(2): **Keras Classifier Model**  
+Fig(2): Keras Classifier Model   
 
 ### 2.1) Prediction:  
 
-Predictions are done for every time distributed sample in "recognition" software using Kerasify [[4]](https://github.com/moof2k/kerasify)  
+Predictions are done for every time distributed sample in "recognition" software using Kerasify [[4](https://github.com/moof2k/kerasify)]  
 
 ## 3) OpenPose:  
-A realtime multi-person skeletal 2D pose estimation deep neural network that locates anatomical keypoints for each person body parts such as limbs, hand, leg etc. using part affinity fields. Details of their design and research can be found here [1].(https://arxiv.org/pdf/1611.08050.pdf).  
+A realtime multi-person skeletal 2D pose estimation deep neural network that locates anatomical keypoints for each person body parts such as limbs, hand, leg etc. using part affinity fields. Details of their design and research can be found [here](https://arxiv.org/pdf/1611.08050.pdf).  
 
 ### 3.1) Gesture Recognition:  
 OpenPose **Hand Keypoints** illustrated in Fig(3.1) is used to classify different human hand gestures like victory, wave, stop, fist etc. The **recognition** application constructs a sample vector using cosine distance measured from reference keypoint (0: wrist) to all other hand keypoints as show in the Fig(3.1). This distance metric allows us to uniquely classify different gestures.  
 
 <img src="images/keypoints_hand.png" height="300"/>   
-Fig(3.1): **OpenPose Hand Keypoints**   [[2]](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/output.md)  
+Fig(3.1): OpenPose Hand Keypoints   [[2](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/output.md)]  
 
 Here are few hand keypoints rendered test samples with prediction and its confidence score.
 
 <img src="images/victory.png" height="200"/>  
-Fig(3.1a): **Victory**  
+Fig(3.1a): Victory  
 
 <img src="images/stop.png" height="200"/>  
-Fig(3.1b): **Stop**  
+Fig(3.1b): Stop  
 
 <img src="images/thumbsup.png" height="200"/>   
-Fig(3.1c): **ThumbsUP**  
+Fig(3.1c): ThumbsUP  
 
 <img src="images/pinch.png" height="200"/>  
-Fig(3.1d): **Pinch**  
+Fig(3.1d): Pinch  
 
 #### 3.1.1) Gesture classifier training:
 **Model parameters:**  
@@ -72,7 +72,7 @@ Validation Accuracy: 97%
 Number of samples: < 600  
 
 <img src="images/hand_training.png" height="250"/>  
-Fig(3.1.1) **Hand Gesture Training Results**  
+Fig(3.1.1) Hand Gesture Training Results   
 
 
 ### 3.2) Emotions Recognition:  
@@ -80,22 +80,22 @@ OpenPose **Face Keypoints** illustrated in Fig(3.2) is used to classify differen
 
 
 <img src="images/keypoints_face.png" height="300"/>   
-Fig(3.2): OpenPose Face Keypoints   [[2]](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/output.md)  
+Fig(3.2): OpenPose Face Keypoints   [[2](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/output.md)]  
 
 
 Here are few face emotions rendered test samples with prediction and its confidence score.  
 
 <img src="images/sad.png" height="200"/>  
-Fig(3.2a): **Sad**  
+Fig(3.2a): Sad  
 
 <img src="images/happy.png" height="200"/>  
-Fig(3.2b): **Happy**   
+Fig(3.2b): Happy   
 
 <img src="images/surprise.png" height="200"/>   
-Fig(3.2c): **Surprise**  
+Fig(3.2c): Surprise  
 
 <img src="images/normal.png" height="200"/>  
-Fig(3.2d): **Normal**  
+Fig(3.2d): Normal  
 
 #### 3.2.1) Emotions classifier training:
 **Model parameters:**  
@@ -112,24 +112,24 @@ Validation Accuracy: 96%
 Number of samples: < 500   
 
 <img src="images/face_training.png" height="250"/>   
-Fig(3.2.1) **Face Emotions Training Results**  
+Fig(3.2.1) Face Emotions Training Results  
 
 ### 3.3) Posture Recognition:  
 OpenPose **Pose Keypoints** illustrated in Fig(3.3) is used to classify different human pose (posture) like sitting, standing and close_to_camera. The **recognition** application constructs a sample vector using l2 distance measured from reference keypoint (0: neck) to all other pose keypoints as show in Fig(3.3). This distance metric allows us to uniquely classify different human posture.  
 
 <img src="images/keypoints_pose.png" height="300"/>    
-Fig(3.3): **OpenPose Pose Keypoints**   [[2](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/output.md)  
+Fig(3.3): OpenPose Pose Keypoints   [[2](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/output.md)]  
 
 Here are few pose rendered test samples with prediction and its confidence score.  
 
 <img src="images/sitting.png" height="200"/>  
-Fig(3.3a): **Sitting**  
+Fig(3.3a): Sitting  
 
 <img src="images/standing.png" height="200"/>  
-Fig(3.3b): **Standing**  
+Fig(3.3b): Standing  
 
 <img src="images/close_to_camera.png" height="200"/>   
-Fig(3.3c): **Close_to_camera**  
+Fig(3.3c): Close_to_camera  
 
 #### 3.3.1) Posture classifier training:
 **Model parameters:**  
@@ -146,7 +146,7 @@ Validation Accuracy: 98%
 Number of samples: < 400   
 
 <img src="images/pose_training.png" height="250"/>  
-Fig(3.2.1) **Pose Training Results**  
+Fig(3.2.1) Pose Training Results  
 
 
 ## 4) DLIB:
