@@ -10,7 +10,7 @@ This github repository work is greatly inspired and have used code, concepts pre
 - [OPENCV](https://github.com/opencv/opencv): Open Source Computer Vision Library.  
 - [OPENPOSE](https://github.com/CMU-Perceptual-Computing-Lab/openpose): A Real-Time Multi-Person Keypoint Detection And Multi-Threading C++ Library.  
 
-## Operating systems:
+## Operating systems (supported):
 - Ubuntu 16.04
 - [Nvidia Jetson TX2](https://developer.nvidia.com/embedded/buy/jetson-tx2)  
 
@@ -24,20 +24,23 @@ This github repository work is greatly inspired and have used code, concepts pre
 
 - [install_compile_and_run](https://github.com/srianant/computer_vision/blob/master/openpose/installation.md)   (INSTALLATION IS MUST..)
 
-## Recognitions:
+## Design:  
+- [Software design](https://github.com/srianant/signal_processing/blob/master/video_processing/openpose/design.md)    
 
-### Gesture recognition:
+## Demo:  
 
-<img src="output/hand_gesture_video.gif" height="400"/>
+### Gesture recognition:  
 
-### Emotions recognition:
+<img src="output/hand_gesture_video.gif" height="400"/>  
 
-<img src="output/emotions_video.gif" height="400"/>
+### Emotions recognition:  
 
-### Pose recognition:
+<img src="output/emotions_video.gif" height="400"/>  
 
-<img src="output/pose_video.gif" height="400"/>
+### Pose recognition:  
 
-### DLIB Face recognition:
+<img src="output/pose_video.gif" height="400"/>  
 
-<img src="output/face_rec.gif" height="400"/>
+### DLIB Face recognition:  
+
+<img src="output/face_rec.gif" height="400"/>  
