@@ -10,9 +10,13 @@ This github repository work is greatly inspired and have used code, concepts pre
 - [OPENCV](https://github.com/opencv/opencv): Open Source Computer Vision Library.  
 - [OPENPOSE](https://github.com/CMU-Perceptual-Computing-Lab/openpose): A Real-Time Multi-Person Keypoint Detection And Multi-Threading C++ Library.  
 
+Thanks to Dr.Michael Rinehart, Chief Scientist at Elastica for his mentorship and guidance through the project.   
+
+
 ## Operating systems (supported):
 - Ubuntu 16.04
 - [Nvidia Jetson TX2](https://developer.nvidia.com/embedded/buy/jetson-tx2)  
+
 
 ## Requirements:
 
