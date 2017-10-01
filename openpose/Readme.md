@@ -2,9 +2,6 @@
 
 The purpose of this work is to demonstrate few state of art computer vision applications like Gesture, Emotions, Posture and Face Recognitions using popular computer vision open source libraries OpenPose/DLIB.
 
-*Acknowledgement:*  
-*This work is greatly inspired and have used code, concepts from libraries like OpenPose, DLIB, Kerasify and OpenCV.*
-
 ## 1) Introduction:  
 
 The **recognition** application design and code is rightly integrated into OpenPose C++/Multithreaded framework. Fig(1) shows software architecture. Gesture, Emotions and Posture recognition is built based on OpenPose hand, face and pose libraries respectively. While Face recognition is built based on DLIB computer vision libraries.
