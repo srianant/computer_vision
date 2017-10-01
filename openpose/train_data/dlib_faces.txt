@@ -1,5 +1,0 @@
-dlib_faces/angelina_jolie.jpg
-dlib_faces/arnold_schwarzenegger.jpg
-dlib_faces/brad_pitt.jpg
-dlib_faces/george_clooney.jpg
-dlib_faces/katy_perry.jpg
