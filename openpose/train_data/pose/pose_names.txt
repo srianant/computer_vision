@@ -1,0 +1,1 @@
+22 serialization::archive 14 0 0 10 7 unknown 15 close_to_camera 8 standing 7 sitting 0  0  0  0  0  0 
