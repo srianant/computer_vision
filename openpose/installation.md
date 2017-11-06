@@ -4,7 +4,7 @@
 #### Update system package index
 > sudo apt update;
 
-#### Install OS libraries (cmake, atlas, boost)  
+#### Install OS libraries (cmake, atlas, boost(1.58.0.1))  
 > sudo apt-get install build-essential cmake pkg-config  
 > sudo apt-get install libx11-dev libatlas-base-dev  
 > sudo apt-get install libgtk-3-dev libboost-python-dev  
@@ -36,7 +36,7 @@ Download the installation script [install-opencv.sh](https://github.com/milq/mil
 > sudo ldconfig  
 > cd ..  
 
-#### Install OpenPose  
+#### Install OpenPose (version: 1.0.0)  
 [openpose_install](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/installation.md)  
 
 Improtant: Make sure to run openpose suggested examples.
