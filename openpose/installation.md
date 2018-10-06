@@ -36,7 +36,7 @@ Download the installation script [install-opencv.sh](https://github.com/milq/mil
 > sudo ldconfig  
 > cd ..  
 
-#### Install OpenPose (version: 1.0.0)  
+#### Install OpenPose (version: 1.0.2)  
 [openpose_install](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/installation.md)  
 
 Improtant: Make sure to run openpose suggested examples.
