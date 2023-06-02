@@ -32,8 +32,8 @@ Thanks to Dr.Michael Rinehart, Chief Scientist at Elastica for his mentorship an
 - [Software design](https://github.com/srianant/computer_vision/blob/master/openpose/Readme.md)    
 
 ## Demo:  
-### Check output folder for
-- Gesture recognition:  
-- Emotions recognition:  
-- Pose recognition:  
-- DLIB Face recognition:  
+### Check output folder
+- Gesture recognition  
+- Emotions recognition 
+- Pose recognition
+- DLIB Face recognition  
