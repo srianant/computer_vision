@@ -26,14 +26,13 @@ Thanks to Dr.Michael Rinehart, Chief Scientist at Elastica for his mentorship an
 
 ## Install, Compile and Run:
 
-- [install_compile_and_run](https://github.com/srianant/computer_vision/blob/master/openpose/installation.md)   (INSTALLATION IS MUST..)
+- [Install, Compile and Run](https://github.com/srianant/computer_vision/blob/master/openpose/installation.md)   (INSTALLATION IS MUST..)
 
 ## Design:  
 - [Software design](https://github.com/srianant/computer_vision/blob/master/openpose/Readme.md)    
 
-## Demo:  
-### Check output folder
-- Gesture recognition  
-- Emotions recognition 
-- Pose recognition
-- DLIB Face recognition  
+## Demo:
+- [Gesture recognition](https://github.com/srianant/computer_vision/blob/master/output/hand_gesture_video.gif) 
+- [Emotions recognition](https://github.com/srianant/computer_vision/blob/master/output/emotions_video.gif)
+- [Pose recognition](https://github.com/srianant/computer_vision/blob/master/output/pose_video.gif)
+- [DLIB Face recognition](https://github.com/srianant/computer_vision/blob/master/output/face_rec.gif)
