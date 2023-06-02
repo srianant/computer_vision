@@ -32,19 +32,8 @@ Thanks to Dr.Michael Rinehart, Chief Scientist at Elastica for his mentorship an
 - [Software design](https://github.com/srianant/computer_vision/blob/master/openpose/Readme.md)    
 
 ## Demo:  
-
-### Gesture recognition:  
-
-<img src="output/hand_gesture_video.gif" height="400"/>  
-
-### Emotions recognition:  
-
-<img src="output/emotions_video.gif" height="400"/>  
-
-### Pose recognition:  
-
-<img src="output/pose_video.gif" height="400"/>  
-
-### DLIB Face recognition:  
-
-<img src="output/face_rec.gif" height="400"/>  
+### Check output folder for
+- Gesture recognition:  
+- Emotions recognition:  
+- Pose recognition:  
+- DLIB Face recognition:  
